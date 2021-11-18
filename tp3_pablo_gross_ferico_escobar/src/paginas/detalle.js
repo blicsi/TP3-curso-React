@@ -1,8 +1,5 @@
 const Detalle = () => {
-    return ( 
-        <>
-        </>
-     );
-}
- 
+  return <></>;
+};
+
 export default Detalle;
