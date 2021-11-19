@@ -5,27 +5,34 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return ( 
         <>
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" >
             <Toolbar>
             <IconButton
                 size="large"
                 edge="start"
-                color="inherit"
+                color="secondary"
                 aria-label="menu"
                 sx={{ mr: 2 }}
             >
-                <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                News
+                Carniceria "Bos Taurus"
             </Typography>
-            <Button color="inherit">Login</Button>
+            <Button
+            component={Link}
+            raised
+            to="/"
+          >
+            Home
+          </Button>
+            <Button color="inherit" onClick={Link} to="/login">Login</Button>
+            <Button color="inherit">Registro</Button>
             </Toolbar>
             </AppBar>
         </Box>
