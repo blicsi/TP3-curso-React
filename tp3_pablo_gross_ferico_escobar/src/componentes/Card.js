@@ -13,15 +13,14 @@ export default function ImgMediaCard() {
         component="img"
         alt="green iguana"
         height="140"
-        image="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Kini_iguana.jpg/1200px-Kini_iguana.jpg"
+        image="https://www.proveeduriapiaf.com.ar/wp-content/uploads/5K4A9741.jpg"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Nico Troll
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget diam est. Sed sed ligula massa. Aenean non congue erat. Praesent et dignissim sapien. Aliquam tortor ante, molestie eu tincidunt ut, dignissim sit amet lectus. Phasellus at elit vel enim feugiat euismod. Maecenas nec arcu at augue aliquam dictum. Cras porta leo orci, non tempor risus imperdiet eget. Aenean quis nibh a risus tempus porttitor ut non metus. Pellentesque fermentum ex lorem, eget pretium nisi feugiat id. Etiam volutpat justo quis bibendum rutrum. Etiam eu dictum arcu. 
         </Typography>
       </CardContent>
       <CardActions>
