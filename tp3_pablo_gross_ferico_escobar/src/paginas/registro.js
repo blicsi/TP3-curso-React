@@ -4,8 +4,13 @@ const Registro = () => {
     return ( 
     <> 
     <Box style={{boxShadow: "60px teal"}}>
+<<<<<<< HEAD
         <div style={{marginTop:"11rem"}}>
             <Typography  variant="h5" style={{color:"black", marginTop:"1rem" , marginLeft:"40rem"}}> Register </Typography>
+=======
+        <div style={{marginTop:"8rem"}}>
+            <Typography align="center" variant="h5" style={{color:"black", marginTop:"1rem" , marginLeft:"1rem"}}> Register </Typography>
+>>>>>>> ea69469834f18ed1acaedb8c796d6cea321df8af
             <div style={{marginLeft:"36rem", marginTop:"1rem"}}>
                  <TextField id="outlined-basic" label="Email" variant="outlined" size="small" />
             </div>
