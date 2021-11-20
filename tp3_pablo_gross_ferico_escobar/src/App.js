@@ -1,17 +1,15 @@
-import "./App.css";
 import Home from "./paginas/Home";
 import Detalle from "./paginas/Detalle";
 import Login from "./paginas/Login";
 import Registro from "./paginas/Registro";
 import Navbar from "./componentes/Navbar";
+import NotFound from "./paginas/NotFound"
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Switch,
-  withRouter,
 } from "react-router-dom";
-import NotFound from "./paginas/NotFound";
 
 function App() {
   return (
@@ -19,16 +17,11 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Home}>
-          </Route>
-          <Route path="/Detalle" exact component={Detalle}>
-          </Route>
-          <Route path="/Login" exact component={Login}>
-          </Route>
-          <Route path="/Registro" exact component={Registro}>
-          </Route>
-          <Route path="*" exact component={NotFound}>
-          </Route>
+          <Route path="/" exact component={Home} />
+          <Route path="/detalle" exact component={Detalle} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/registro" exact component={Registro} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </Router>
     </>
