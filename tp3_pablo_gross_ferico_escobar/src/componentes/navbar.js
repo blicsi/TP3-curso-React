@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import { Link } from "react-router-dom";
+import { RouterLink } from "react-router-dom";
 
 const Navbar = () => {
     return ( 
@@ -24,20 +24,10 @@ const Navbar = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 Carniceria "Bos Taurus"
             </Typography>
-            <Button
-            component={Link}
-            raised
-            to="/"
-          >
-            Home
-          </Button>
-            <Button color="inherit" onClick={Link} to="/login">Login</Button>
-            <Button color="inherit">Registro</Button>
             </Toolbar>
             </AppBar>
         </Box>
         </>
      );
 }
- 
 export default Navbar;
