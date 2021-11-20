@@ -11,6 +11,7 @@ import {
   Switch,
   withRouter,
 } from "react-router-dom";
+import NotFound from "./paginas/NotFound";
 
 function App() {
   return (
@@ -18,10 +19,16 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/detalle" element={<Detalle />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/registro" element={<Registro />}></Route>
+          <Route path="/" exact component={Home}>
+          </Route>
+          <Route path="/Detalle" exact component={Detalle}>
+          </Route>
+          <Route path="/Login" exact component={Login}>
+          </Route>
+          <Route path="/Registro" exact component={Registro}>
+          </Route>
+          <Route path="*" exact component={NotFound}>
+          </Route>
         </Switch>
       </Router>
     </>

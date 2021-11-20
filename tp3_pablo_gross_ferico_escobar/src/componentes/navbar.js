@@ -25,6 +25,7 @@ const Navbar = () => {
             </Typography>
               <Button color="inherit"><Link to="/login">login</Link></Button>
               <Button color="inherit"><Link to="/registro">registro</Link></Button>
+              <Button color="inherit"><Link to="/">home</Link></Button>
           </Toolbar>
         </AppBar>
       </Box>
