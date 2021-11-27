@@ -27,9 +27,9 @@ const Navbar = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               BOS TAURUS
             </Typography>
-              <Button color="inherit"><Link to="/" style={{textDecoration: 'none', color:"White"}}>Home</Link></Button>
-              <Button color="inherit"><Link to="/login" style={{textDecoration: 'none', color:"White"}}>login</Link></Button>
-              <Button color="inherit"><Link to="/registro" style={{textDecoration: 'none', color:"White"}}>registro</Link></Button>
+              <Button color="inherit" component={Link} to="/">Home</Button>
+              <Button color="inherit" component={Link} to="/login">login</Button>
+              <Button color="inherit" component={Link} to="/registro">registro</Button>
           </Toolbar>
         </AppBar>
       </Box>
