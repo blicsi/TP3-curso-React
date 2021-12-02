@@ -33,7 +33,7 @@ const Registro = () => {
       }
     } catch (e) {
       console.log("error", e.code);
-      if (e.code == "auth/email-already-in-use") {
+      if (e.code === "auth/email-already-in-use") {
         alert("El email esta registrado");
       }
     }
