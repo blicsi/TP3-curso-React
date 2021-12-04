@@ -24,7 +24,7 @@ const Navbar = () => {
               sx={{ mr: 2 }}
             ></IconButton>
             <img src={logo} alt="Logo" />
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h6" component={Link} to="/" style={{color:"white", textDecoration:"none"}} sx={{ flexGrow: 1 }}>
               BOS TAURUS
             </Typography>
               <Button color="inherit" component={Link} to="/">Home</Button>

@@ -1,5 +1,3 @@
-
-
 import Home from "./paginas/Home";
 import Detalle from "./paginas/Detalle";
 import Login from "./paginas/Login";
@@ -8,14 +6,13 @@ import Navbar from "./componentes/Navbar";
 import NotFound from "./paginas/NotFound";
 import {
   BrowserRouter as Router,
-  Routes,
   Route,
   Switch,
 } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <div>
       <Router>
         <Navbar />
         <Switch>
@@ -26,7 +23,7 @@ function App() {
           <Route path="*" component={NotFound} />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 
