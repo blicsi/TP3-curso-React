@@ -5,11 +5,8 @@ import {useLocation} from "react-router-dom"
 import firebase from "../config/firebase"
 import AuthContext from "../Context/AuthContext";
 
-
-
-
-function Login() {
-    const { register,control ,handleSubmit,formState:{errors} } = useForm();
+function Login (){
+    const { register,control, handleSubmit,formState:{errors} } = useForm();
     const [loading,setLoading] = useState(false)
     const context = useContext(AuthContext)
     const onSubmit = async (data) => {
@@ -24,10 +21,9 @@ function Login() {
                 console.log("userInfo",userInfo.docs[0]?.data())
                 setLoading(false)
                 context.loginUser(userInfo.docs[0]?.data())
-                console.log("se logeo bien")
             }
         }catch(e){
-            console.log("error|no se logeo|",e)
+            console.log("error",e)
             setLoading(false)
         }
         
