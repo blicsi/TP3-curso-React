@@ -11,8 +11,7 @@ function AltaProducto (){
     const onSubmit = async (data) => {
         console.log("data",data);
         try{
-            const document = await firebase.db.collection("producto")
-            .add(data)
+            const document = await firebase.db.collection("productos").add(data)
             console.log(document)
          
         }catch(e){
@@ -27,20 +26,21 @@ function AltaProducto (){
         <form onSubmit={handleSubmit(onSubmit)}>
             <FormGroup>
                 <FormLabel>Nombre</FormLabel>
-                    <Controller  name="nombre" control={control} rules={{required:true}} register={{...register("nombre",{required:true})}}  render={({ field }) => <Input {...field} type="text" />}/>
+                    <Controller  name="nombre" control={control} rules={{required:true}} register={{...register("title",{required:true})}}  render={({ field }) => <Input {...field} type="text" />}/>
                     {errors.nombre && <FormHelperText>El campo es obligatorio</FormHelperText>}
             
                 <FormLabel>Precio</FormLabel>
-                    <Controller name="precio" control={control} rules={{required:true}} register={{...register("precio",{required:true})}}  render={({ field }) => <Input {...field} type="number" />}/>
+                    <Controller name="precio" control={control} rules={{required:true}} register={{...register("price",{required:true})}}  render={({ field }) => <Input {...field} type="number" />}/>
                     {errors.precio?.type==="required" && <FormHelperText>El campo es obligatorio</FormHelperText>}
                 <FormLabel>Descripcion</FormLabel>
-                    <Controller name="descripcion" control={control} rules={{required:true}} register={{...register("descripcion",{required:true})}}  render={({ field }) => <Input {...field} type="text" />}/>     
+                    <Controller name="descripcion" control={control} rules={{required:true}} register={{...register("description",{required:true})}}  render={({ field }) => <Input {...field} type="text" />}/>     
                     {errors.descripcion?.type==="required" && <FormHelperText>El campo es obligatorio</FormHelperText>}
                 <FormLabel>SKU</FormLabel>
-                    <Controller name="sku" control={control} rules={{required:true}} register={{...register("SKU",{required:true})}}  render={({ field }) => <Input {...field} type="number" />}/>        
+                    <Controller name="sku" control={control} rules={{required:true}} register={{...register("sku",{required:true})}}  render={({ field }) => <Input {...field} type="number" />}/>        
                     {errors.sku?.type==="required" && <FormHelperText>El campo es obligatorio</FormHelperText>} 
                 <Input type="submit" value="Agregar Producto"/> 
             </FormGroup>
+
         
         </form>
         </div>

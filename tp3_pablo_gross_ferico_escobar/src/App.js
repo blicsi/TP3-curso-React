@@ -22,7 +22,10 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/registro" exact component={Registro} />
           <Route path="/altaProducto" exact component={AltaProducto}/>
+          <Route path="/card/:id" exact component={<Detalle/>}/>
+
           <Route path="*" component={NotFound} />
+          
         </Switch>
       </Router>
     </div>

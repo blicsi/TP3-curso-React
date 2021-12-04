@@ -5,27 +5,23 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
-export default function ImgMediaCard() {
+export default function ImgMediaCard(props) {
+  const {datos,handleDelete}=props
+  
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image="https://www.proveeduriapiaf.com.ar/wp-content/uploads/5K4A9741.jpg"
-      />
+    <Card sx={{maxWidth: 345, m:"20"}}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Nico Troll
+          {datos.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget diam est. Sed sed ligula massa. Aenean non congue erat. Praesent et dignissim sapien. Aliquam tortor ante, molestie eu tincidunt ut, dignissim sit amet lectus. Phasellus at elit vel enim feugiat euismod. Maecenas nec arcu at augue aliquam dictum. Cras porta leo orci, non tempor risus imperdiet eget. Aenean quis nibh a risus tempus porttitor ut non metus. Pellentesque fermentum ex lorem, eget pretium nisi feugiat id. Etiam volutpat justo quis bibendum rutrum. Etiam eu dictum arcu. 
+          ${datos.price}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Comprar</Button>
-        <Button size="small">Detalle</Button>
+        <Button size="small" component={Link} to={"/card/"+datos.id}>Detalle</Button>
       </CardActions>
     </Card>
   );
