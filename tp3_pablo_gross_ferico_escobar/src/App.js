@@ -9,6 +9,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import AltaProducto from "./crear_productos/AltaProducto";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/detalle" exact component={Detalle} />
           <Route path="/login" exact component={Login} />
           <Route path="/registro" exact component={Registro} />
+          <Route path="/altaProducto" exact component={AltaProducto}/>
           <Route path="*" component={NotFound} />
         </Switch>
       </Router>
