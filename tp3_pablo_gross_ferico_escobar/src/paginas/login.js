@@ -1,4 +1,4 @@
-import { TextField, Box, Typography, Button, FormGroup, FormLabel, Input, FormHelperText } from "@mui/material";
+import { TextField, Box, Typography, Button, FormGroup, FormLabel, Input, FormHelperText, Alert } from "@mui/material";
 import React,{useState,useContext} from "react";
 import { Controller, useForm } from "react-hook-form";
 import {useLocation} from "react-router-dom"
@@ -9,6 +9,7 @@ function Login (){
     const { register,control, handleSubmit,formState:{errors} } = useForm();
     const [loading,setLoading] = useState(false)
     const context = useContext(AuthContext)
+    const [alert,setAlert] = useState({variant:"",text:""})
     const onSubmit = async (data) => {
         setLoading(true)
         console.log("data",data);
@@ -20,10 +21,13 @@ function Login (){
                 .get()
                 console.log("userInfo",userInfo.docs[0]?.data())
                 setLoading(false)
+                setAlert({variant:"success",text:"Login exitoso"})
+            //  context.loginUser(userInfo.docs[0]?.data())
             }
         }catch(e){
             console.log("error",e)
             setLoading(false)
+            setAlert({variant:"warning",text:"Error no se pudo logear"});
         }
         
     }
@@ -42,7 +46,7 @@ function Login (){
                     {errors.password?.type==="minLength" && <FormHelperText>Debe completar al menos 6 caracteres</FormHelperText>}
                 
                 <Input type="submit" value="Login"/> 
-
+                <Alert severity={alert.variant} >{alert.text}</Alert> 
             </FormGroup>
         </form>
     </>
