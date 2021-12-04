@@ -61,7 +61,7 @@ const Registro = () => {
               {errors.password?.type==="required" && <FormHelperText>El campo es obligatorio</FormHelperText>}
               {errors.password?.type==="minLength" && <FormHelperText>Debe completar al menos 6 caracteres</FormHelperText>} 
            <Input type="submit" value="Registrarse"/> 
-           <Alert severity={alert.variant} value={alert.text}></Alert> 
+           <Alert severity={alert.variant} >{alert.text}</Alert> 
           
         </FormGroup>
         
