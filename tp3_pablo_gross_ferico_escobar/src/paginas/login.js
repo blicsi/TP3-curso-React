@@ -20,7 +20,6 @@ function Login (){
                 .get()
                 console.log("userInfo",userInfo.docs[0]?.data())
                 setLoading(false)
-                context.loginUser(userInfo.docs[0]?.data())
             }
         }catch(e){
             console.log("error",e)

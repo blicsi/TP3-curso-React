@@ -4,7 +4,7 @@ import Home from "./paginas/Home";
 import Detalle from "./paginas/Detalle";
 import Login from "./paginas/Login";
 import Registro from "./paginas/Registro";
-import Navbar from "./componentes/navbar";
+import Navbar from "./componentes/Navbar";
 import NotFound from "./paginas/NotFound"
 import {
   BrowserRouter as Router,
