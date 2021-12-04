@@ -1,4 +1,4 @@
-import { TextField, Box, Typography, Button, FormControl, FormLabel, FormHelperText, Input, FormGroup, Checkbox, Alert } from "@mui/material";
+import { TextField, Box, Typography, Button, FormControl, FormLabel, FormHelperText, Input, FormGroup, Checkbox, Alert, CircularProgress } from "@mui/material";
 import firebase from "../config/firebase";
 import react, { useState, useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
@@ -32,19 +32,15 @@ const Registro = () => {
         console.log("document", document);
         setLoading(false)
         setAlert({variant:"success",text:"Registro exitoso"})
-        alert("registro exitoso")
+        
       }
     } catch (e) {
       console.log("error", e.code);
       if (e.code === "auth/email-already-in-use") {
-        alert("El email esta registrado");
+        setAlert({variant:"warning",text:"El email se encuentra registrado"})
       }
     }
-  };
-/*
-<Input type="text" register={{...register("nombre",{required:true})}}/>
-*/
-
+  }
 
   return (
     <>  
@@ -65,8 +61,10 @@ const Registro = () => {
               {errors.password?.type==="required" && <FormHelperText>El campo es obligatorio</FormHelperText>}
               {errors.password?.type==="minLength" && <FormHelperText>Debe completar al menos 6 caracteres</FormHelperText>} 
            <Input type="submit" value="Registrarse"/> 
-                    
+           <Alert severity={alert.variant} value={alert.text}></Alert> 
+          
         </FormGroup>
+        
       </form>
     </>
   );
