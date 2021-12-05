@@ -18,6 +18,7 @@ const Detalle = () => {
                       setProducto(response)
                       setLoading(false)
                   }
+                  console.log(response)
               }catch(e){
 
               }

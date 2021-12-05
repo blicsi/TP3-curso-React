@@ -1,17 +1,15 @@
 import { Typography } from "@mui/material"
 import React from "react"
-function ProductoDetalle (props){
+const ProductoDetalle = (props) =>{
         const {datos} = props
-        console.log(props.datos)
+        console.log(datos.title)
     
         return(
             <>
             <Typography variant="h1">{datos.title}</Typography>
-            <Typography>precio= ${datos.price}</Typography>
-            <Typography>{datos.sku}</Typography>
+            <Typography>precio: ${datos.price}</Typography>
+            <Typography>sku: {datos.sku}</Typography>
             <Typography>{datos.description}</Typography>
-            
-            <p>$ </p>
             </>
         )
       
